@@ -16,7 +16,7 @@ export const PositionsTable = ({ standingsData }: Props) => {
       <thead className="bg-[#FD2A2A] text-white">
         <tr className="w-full ">
           <th className="py-3 px-6 text-left"></th>
-          <th className="py-3 px-6 text-left hidden sm:table-cell"></th>
+          <th className="py-3 px-6 text-left hidden md:table-cell"></th>
           <th className="py-3 px-6 text-left">Equipo</th>
           <th className="py-3 px-6 text-left">PJ</th>
           <th className="py-3 px-6 text-left hidden sm:table-cell">G</th>

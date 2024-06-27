@@ -18,7 +18,7 @@ export default async function getPositionsTable(
   };
 
   let endPoint = `https://v3.football.api-sports.io/standings?league=9&season=2024`;
-
+ 
   try {
     const response = await fetch(endPoint, info);
     const data: PositionsTable = await response.json();
