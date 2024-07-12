@@ -22,12 +22,12 @@ export default async function Home() {
               <div className="bg-gradient-to-r from-[#002b6f] to-[#003a8c] p-4 rounded shadow text-2xl">
                 <div className="grid grid-cols-2">
                   <div className="flex items-center">
-                  <Image src={teams[5].logo} width={50} height={50} alt="xd"/>
+                  <Image src={teams[5]?.logo} width={50} height={50} alt="xd"/>
                   <p className="mx-2">Argentina</p>
                   </div>
                   <p className="text-right">1 (4)</p>
                   <div className="flex items-center">
-                  <Image src={teams[11].logo} width={50} height={50} alt="xd" />
+                  <Image src={teams[11]?.logo} width={50} height={50} alt="xd" />
                   <p className="mx-2">Ecuador</p>
                   </div>
                   <p className="text-right">1 (2)</p>
@@ -36,12 +36,12 @@ export default async function Home() {
               <div className="bg-gradient-to-r from-[#002b6f] to-[#003a8c] p-4 rounded shadow text-2xl">
                 <div className="grid grid-cols-2">
                 <div className="flex items-center">
-                  <Image src={teams[8].logo} width={50} height={50} alt="xd" />
+                  <Image src={teams[8]?.logo} width={50} height={50} alt="xd" />
                   <p className="mx-2">Venezuela</p>
                   </div>
                   <p className="text-right">1 (3)</p>
                   <div className="flex items-center">
-                  <Image src={teams[15].logo} width={50} height={50} alt="xd" />
+                  <Image src={teams[15]?.logo} width={50} height={50} alt="xd" />
                   <p className="mx-2">Canadá</p>
                   </div>
                   <p className="text-right">1 (4)</p>
@@ -50,12 +50,12 @@ export default async function Home() {
               <div className="bg-gradient-to-r from-[#002b6f] to-[#003a8c] p-4 rounded shadow text-2xl">
                 <div className="grid grid-cols-2">
                 <div className="flex items-center">
-                  <Image src={teams[1].logo} width={50} height={50} alt="xd"  className="py-2" />
+                  <Image src={teams[1]?.logo} width={50} height={50} alt="xd"  className="py-2" />
                   <p className="mx-2">Uruguay</p>
                   </div>
                   <p className="text-right">0 (4)</p>
                   <div className="flex items-center">
-                  <Image src={teams[0].logo} width={50} height={50} alt="xd" />
+                  <Image src={teams[0]?.logo} width={50} height={50} alt="xd" />
                   <p className="mx-2">Brasil</p>
                   </div>
                   <p className="text-right">0 (2)</p>
@@ -64,12 +64,12 @@ export default async function Home() {
               <div className="bg-gradient-to-r from-[#002b6f] to-[#003a8c] p-4 rounded shadow text-2xl">
                 <div className="grid grid-cols-2">
                 <div className="flex items-center">
-                  <Image src={teams[2].logo} width={50} height={50} alt="xd"/>
+                  <Image src={teams[2]?.logo} width={50} height={50} alt="xd"/>
                   <p className="mx-2">Colombia</p>
                   </div>
                   <p className="text-right">5</p>
                   <div className="flex items-center">
-                  <Image src={teams[3].logo} width={50} height={50} alt="xd"/>
+                  <Image src={teams[3]?.logo} width={50} height={50} alt="xd"/>
                   <p className="mx-2">Panamá</p>
                   </div>
                   <p className="text-right">0</p>
@@ -84,12 +84,12 @@ export default async function Home() {
               <div className="bg-gradient-to-r from-[#002b6f] to-[#003a8c] p-4 rounded shadow text-2xl">
                 <div className="grid grid-cols-2">
                 <div className="flex items-center">
-                  <Image src={teams[5].logo} width={50} height={50} alt="xd"/>
+                  <Image src={teams[5]?.logo} width={50} height={50} alt="xd"/>
                   <p className="mx-2">Argentina</p>
                   </div>
                   <p className="text-right">2</p>
                   <div className="flex items-center">
-                  <Image src={teams[15].logo} width={50} height={50} alt="xd"/>
+                  <Image src={teams[15]?.logo} width={50} height={50} alt="xd"/>
                   <p className="mx-2">Canadá</p>
                   </div>
                   <p className="text-right">0</p>
@@ -98,12 +98,12 @@ export default async function Home() {
               <div className="bg-gradient-to-r from-[#002b6f] to-[#003a8c] p-4 rounded shadow text-2xl">
                 <div className="grid grid-cols-2">
                 <div className="flex items-center">
-                  <Image src={teams[1].logo} width={50} height={50} alt="xd"/>
+                  <Image src={teams[1]?.logo} width={50} height={50} alt="xd"/>
                   <p className="mx-2">Uruguay</p>
                   </div>
                   <p className="text-right">0</p>
                   <div className="flex items-center">
-                  <Image src={teams[2].logo} width={50} height={50} alt="xd"/>
+                  <Image src={teams[2]?.logo} width={50} height={50} alt="xd"/>
                   <p className="mx-2">Colombia</p>
                   </div>
                   <p className="text-right">1</p>
@@ -118,12 +118,12 @@ export default async function Home() {
               <div className="bg-gradient-to-r from-[#002b6f] to-[#003a8c] p-4 rounded shadow text-2xl">
                 <div className="grid grid-cols-2">
                 <div className="flex items-center">
-                  <Image src={teams[5].logo} width={50} height={50} alt="xd"/>
+                  <Image src={teams[5]?.logo} width={50} height={50} alt="xd"/>
                   <p className="mx-2">Argentina</p>
                   </div>
                   <p className="text-right">-</p>
                   <div className="flex items-center">
-                  <Image src={teams[2].logo} width={50} height={50} alt="xd"/>
+                  <Image src={teams[2]?.logo} width={50} height={50} alt="xd"/>
                   <p className="mx-2">Colombia</p>
                   </div>
                   <p className="text-right">-</p>
@@ -138,12 +138,12 @@ export default async function Home() {
           <div className="bg-gradient-to-r from-[#002b6f] to-[#003a8c] p-2 rounded shadow w-3/4 mx-auto md:w-1/2">
             <div className="grid grid-cols-2 text-xl">
             <div className="flex items-center">
-                  <Image src={teams[15].logo} width={50} height={50} alt="xd" className="py-2"/>
+                  <Image src={teams[15]?.logo} width={50} height={50} alt="xd" className="py-2"/>
                   <p className="mx-2">Canadá</p>
                   </div>
               <p className="text-right">-</p>
               <div className="flex items-center">
-                  <Image src={teams[1].logo} width={50} height={50} alt="xd"/>
+                  <Image src={teams[1]?.logo} width={50} height={50} alt="xd"/>
                   <p className="mx-2">Uruguay</p>
                   </div>
               <p className="text-right">-</p>
