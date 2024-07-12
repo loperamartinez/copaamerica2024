@@ -45,7 +45,7 @@ export const NavBar = () => {
         </button>
       </div>
 
-      {/* Menú de navegación */}
+   
       <div className={`sm:flex flex-col sm:flex-row sm:space-x-4 sm:items-center sm:justify-end ${isOpen ? 'block' : 'hidden'}`}>
         {navItems.map((navItem) => (
           <Link

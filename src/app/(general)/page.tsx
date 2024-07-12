@@ -4,7 +4,6 @@ import Image from "next/image";
 export default async function Home() {
  
   const teams = await getTeams();
-//<Image src={teams[2].logo} width={50} height={50} alt="xd" />
   return (
     <main className="mx-[-1px] sm:mx-10">
          <div className="p-8 min-h-screen text-white animate-fade-right animate-once">
