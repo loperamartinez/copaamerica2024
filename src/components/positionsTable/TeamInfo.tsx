@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { SimplePositionsTable } from "@/interfaces/simplePositionsTable";
+import Link from "next/link";
 
 interface Props {
   standing: SimplePositionsTable;
@@ -8,15 +9,20 @@ interface Props {
 }
 
 export const TeamInfo = ({ standing, isLast }: Props) => {
-
-  const rowClasses = `text-white text-center animate-appearance-in ${!isLast ? 'border-b border-white' : ''}`;
-    return (
-    <tr className={`{${rowClasses}}`} >
+  const rowClasses = `text-white text-center  ${
+    !isLast ? "border-b border-white" : ""
+  }`;
+  return (
+    <tr className={`{${rowClasses}}`}>
       <td className="px-3 py-4 ">{standing.rank}</td>
       <td className="px-3 py-4 hidden sm:table-cell">
         <Image src={standing.logo} width={35} height={35} alt="flag team" />
       </td>
-      <td className="px-3 py-4 ">{standing.name}</td>
+      <td className="px-3 py-4">
+        <Link href={`/teams/${standing.id}`} passHref>
+          {standing.name}
+        </Link>
+      </td>
       <td className="px-3 py-4 ">{standing.played}</td>
       <td className="px-3 py-4 hidden sm:table-cell">{standing.win}</td>
       <td className="px-3 py-4 hidden sm:table-cell">{standing.draw}</td>
@@ -28,4 +34,3 @@ export const TeamInfo = ({ standing, isLast }: Props) => {
     </tr>
   );
 };
-

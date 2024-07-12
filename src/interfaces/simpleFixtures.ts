@@ -1,5 +1,5 @@
 export interface SimpleFixtures {
-    id: number;
+    id: string;
     date: string;
     stadium: string;
     city: string;

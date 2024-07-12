@@ -10,9 +10,9 @@ interface Props {
 
 export const PositionsTable = ({ standingsData }: Props) => {
   return (
-<div className={`${allFont.className} mx-[-60px] sm:mx-10`}>
+<div className={`${allFont.className} mx-[-60px] sm:mx-10 animate-flip-down`}>
   <div className="overflow-x-auto">
-    <table className="min-w-full bg-[#002b6f] shadow-md rounded-lg overflow-hidden sm:w-full">
+    <table className="min-w-full bg-gradient-to-r from-[#002b6f] to-[#003a8c] shadow-md rounded-lg overflow-hidden sm:w-full">
       <thead className="bg-[#FD2A2A] text-white">
         <tr className="w-full ">
           <th className="py-3 px-6 text-left"></th>
@@ -39,27 +39,4 @@ export const PositionsTable = ({ standingsData }: Props) => {
   );
 };
 
-/*
-<table className=" bg-[#08184A] rounded-lg">
-        <thead>
-          <tr>
-            <th className="py-2 px-4"></th>
-            <th className="py-2 px-4"></th>
-            <th className="py-2 px-4">Equipo</th>
-            <th className="py-2 px-4">PJ</th>
-            <th className="py-2 px-4">G</th>
-            <th className="py-2 px-4">E</th>
-            <th className="py-2 px-4">P</th>
-            <th className="py-2 px-4">GF</th>
-            <th className="py-2 px-4">GC</th>
-            <th className="py-2 px-4">DG</th>
-            <th className="py-2 px-4">Pts</th>
-          </tr>
-        </thead>
-        <tbody>
-          {standingsData.map((standing) => (
-            <TeamInfo key={standing.id} standing={standing} />
-          ))}
-        </tbody>
-      </table>
-      */
+

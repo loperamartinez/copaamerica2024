@@ -7,9 +7,11 @@ export default async function FixturePage() {
 
   return (
     <div className="mx-28">
-        <Fixture fixturesData={fixturesData}/>
+      <h1 className="flex justify-center items-center text-4xl text-white font-bold py-4">Fixture</h1>
+      <Fixture fixturesData={fixturesData}/>
     </div>
   );
 }
 
-//        {JSON.stringify(fixtures)};
+//{JSON.stringify(fixtures)};
+//

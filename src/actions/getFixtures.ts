@@ -10,6 +10,7 @@ export default async function getFixtures(
     headers: {
       "x-rapidapi-host": "v3.football.api-sports.io",
       "x-rapidapi-key": API_KEY,
+      "Content-Type": "application/json"
     },
     next: {
       revalidate: 60 * 60 * 24,
@@ -17,13 +18,13 @@ export default async function getFixtures(
   };
 
   let endPoint = `https://v3.football.api-sports.io/fixtures?league=9&season=2024`;
-
+ 
   try {
     const response = await fetch(endPoint, info);
     const data: Fixtures = await response.json();
-
+    
     const dataStadium = data.response.map((response) => ({
-        id: response.fixture.id,
+        id: response.fixture.id.toString(),
         date: new Date(response.fixture.date).toLocaleDateString(),
         stadium: response.fixture.venue.name,
         city: response.fixture.venue.city,
@@ -38,6 +39,7 @@ export default async function getFixtures(
     dataStadium.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
     return dataStadium;
+    
 
   } catch (err) {
     console.error(`Error fetching standings`);
@@ -45,10 +47,3 @@ export default async function getFixtures(
   }
 }
 
-/*nameHome: response.teams.home,
-        nameAway: response.teams.away,
-        logo: response.teams.home,
-        stadium: response.fixture.venue,
-        city: response.fixture.venue,
-        goalsHome: response.goals.home,
-        goalsAway: response.goals.away, */

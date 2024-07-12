@@ -18,7 +18,7 @@ export default async function getPositionsTable(
   };
 
   let endPoint = `https://v3.football.api-sports.io/standings?league=9&season=2024`;
- 
+  
   try {
     const response = await fetch(endPoint, info);
     const data: PositionsTable = await response.json();
@@ -43,9 +43,20 @@ export default async function getPositionsTable(
       )
     );
 
-    const filteredTable = infoTable.filter((team) => team.group === group);
 
-    return filteredTable;
+    const seenIds = new Set<number>();
+    const filteredTable = infoTable.filter((team) => {
+      if (team.group === group && !seenIds.has(team.id)) {
+        seenIds.add(team.id);
+        return true;
+      }
+      return false;
+    });
+
+    const sortedTable = filteredTable.sort((b, a) => a.points - b.points);
+
+    return sortedTable;
+
   } catch (err) {
     console.error(`Error fetching standings`);
     throw new Error(`Error fetching standings: ${err}`);

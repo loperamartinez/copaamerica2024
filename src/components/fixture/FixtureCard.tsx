@@ -1,5 +1,6 @@
 import { SimpleFixtures } from "@/interfaces/simpleFixtures";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface Props {
@@ -8,8 +9,9 @@ interface Props {
 
 export const FixtureCard = ({ fixtureData }: Props) => {
   return (
-    <div className="animate-appearance-in max-w-sm mx-[-60px] sm:mx-0 rounded-lg overflow-hidden shadow-lg bg-gradient-to-r from-[#002b6f] to-[#003a8c] p-6 m-4 border border-gray-200">
+    <div className="animate-flip-up max-w-sm mx-[-75px] sm:mx-0 rounded-lg overflow-hidden shadow-lg bg-gradient-to-r from-[#002b6f] to-[#003a8c] p-6 m-4 border border-gray-200">
       <div className="flex justify-between items-center mb-4">
+
         <span className="text-lg font-semibold text-white">
           {fixtureData.date}
         </span>
@@ -22,7 +24,7 @@ export const FixtureCard = ({ fixtureData }: Props) => {
           height={35}
           alt="logo selección"
         />
-        <div className="text-xl font-bold text-blue-600">
+        <div className="text-lg lg:text-xl font-bold text-blue-600">
           {fixtureData.nameHome}
         </div>
         <div className="flex items-center space-x-1">
@@ -34,7 +36,7 @@ export const FixtureCard = ({ fixtureData }: Props) => {
             {fixtureData.goalsAway?.toString()}
           </span>
         </div>
-        <div className="text-xl font-bold text-[#FD2A2A]">
+        <div className="text-lg lg:text-xl font-bold text-[#FD2A2A]">
           {fixtureData.nameAway}
         </div>
         <Image
@@ -56,6 +58,9 @@ export const FixtureCard = ({ fixtureData }: Props) => {
           {fixtureData.city}
         </span>
       </div>
+      <Link href={`/fixture/${fixtureData.id}`} className="bg-blue-700 text-white font-semibold py-2 px-4 rounded hover:bg-blue-800">
+      Ver más
+    </Link>
     </div>
   );
 };
