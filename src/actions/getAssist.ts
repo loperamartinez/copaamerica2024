@@ -4,7 +4,7 @@ import { SimpleAssist } from "@/interfaces/simpleAssist";
 
 export default async function getAssist(
 ):Promise<SimpleAssist[]> {
-  const API_KEY: string = process.env.NEXT_PUBLIC_API_FOOTBAL_KEY as string;
+  const API_KEY: string = process.env.API_FOOTBAL_KEY as string;
 
   const info = {
     method: "GET",
