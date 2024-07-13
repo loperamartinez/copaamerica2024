@@ -4,7 +4,7 @@ import { SimplePositionsTable } from "@/interfaces/simplePositionsTable";
 export default async function getPositionsTable(
   group: string
 ): Promise<SimplePositionsTable[]> {
-  const API_KEY: string = process.env.NEXT_PUBLIC_API_FOOTBAL_KEY as string;
+  const API_KEY: string = process.env.API_FOOTBAL_KEY as string;
 
   const info = {
     method: "GET",
