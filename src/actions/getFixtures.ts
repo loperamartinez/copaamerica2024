@@ -10,7 +10,8 @@ export default async function getFixtures(
     headers: {
       "x-rapidapi-host": "v3.football.api-sports.io",
       "x-rapidapi-key": API_KEY,
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      "Accept": "application/json"
     },
     next: {
       revalidate: 60 * 60 * 24,
