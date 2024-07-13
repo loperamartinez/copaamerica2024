@@ -4,7 +4,7 @@ import { SimplePlayerInformation } from "@/interfaces/simplePlayer";
 
 export default async function getPlayers(id: number
 ): Promise<SimplePlayerInformation[]> {
-  const API_KEY: string = process.env.API_FOOTBAL_KEY as string;
+  const API_KEY: string = process.env.NEXT_PUBLIC_API_FOOTBAL_KEY as string;
 
   const info = {
     method: "GET",
