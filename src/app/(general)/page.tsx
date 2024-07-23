@@ -1,5 +1,6 @@
 import getTeams from "@/actions/getTeams";
 import Image from "next/image";
+import { FaCrown, FaTrophy } from "react-icons/fa";
 
 export default async function Home() {
  
@@ -119,14 +120,16 @@ export default async function Home() {
                 <div className="grid grid-cols-2">
                 <div className="flex items-center">
                   <Image src={teams[5]?.logo} width={50} height={50} alt="xd"/>
-                  <p className="mx-2">Argentina</p>
+                  <p className="mx-2">
+                    Argentina</p>
+                    <FaTrophy size={60} className="mx-2"/>
                   </div>
-                  <p className="text-right">-</p>
+                  <p className="text-right">1</p>
                   <div className="flex items-center">
                   <Image src={teams[2]?.logo} width={50} height={50} alt="xd"/>
                   <p className="mx-2">Colombia</p>
                   </div>
-                  <p className="text-right">-</p>
+                  <p className="text-right">0</p>
                 </div>
               </div>
             </div>
@@ -141,12 +144,12 @@ export default async function Home() {
                   <Image src={teams[15]?.logo} width={50} height={50} alt="xd" className="py-2"/>
                   <p className="mx-2">Canadá</p>
                   </div>
-              <p className="text-right">-</p>
+              <p className="text-right">2 (3)</p>
               <div className="flex items-center">
                   <Image src={teams[1]?.logo} width={50} height={50} alt="xd"/>
                   <p className="mx-2">Uruguay</p>
                   </div>
-              <p className="text-right">-</p>
+              <p className="text-right">2 (4)</p>
             </div>
           </div>
         </div>
